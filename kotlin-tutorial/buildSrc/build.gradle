@@ -1,0 +1,18 @@
+plugins {
+    id "java-gradle-plugin"
+}
+
+
+gradlePlugin {
+    plugins {
+        testConventionsPlugin {
+            id = "club.smileboy.test.convention"
+            implementationClass = "club.smileboy.app.plugins.TestConventions"
+        }
+
+        projectConvetionsPlugin {
+            id = "club.smileboy.project.convetion"
+            implementationClass = "club.smileboy.app.plugins.ProjectConventions"
+        }
+    }
+}

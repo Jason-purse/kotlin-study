@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+
+    resolutionStrategy {
+        eachPlugin {
+            if(it.requested.id == 'org.jetbrains.kotlin.jvm') {
+                useVersion '1.6.10-RC'
+            }
+        }
+    }
+}
+
+rootProject.name = 'kotlin-tutorial'
+
+
+
+settings.gradle.allprojects {
+    version "1.0-SNAPSHOT"
+    repositories {
+        mavenCentral()
+    }
+}
+
+
+
+include 'kotlin-coroutine'
+

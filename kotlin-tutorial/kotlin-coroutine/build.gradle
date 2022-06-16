@@ -1,0 +1,12 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'club.smileboy.test.convention'
+}
+
+group 'club.smileboy'
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
