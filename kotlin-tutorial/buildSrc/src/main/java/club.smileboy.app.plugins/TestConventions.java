@@ -21,7 +21,8 @@ public class TestConventions implements Plugin<Project> {
     @Override
     public void apply(Project project) {
         project.getDependencies().add(JavaPlugin.TEST_IMPLEMENTATION_CONFIGURATION_NAME,"org.junit.jupiter:junit-jupiter");
-
+        project.getPlugins().withType(JavaPlugin.class, (javaPlugin) -> project.getDependencies()
+                .add(JavaPlugin.TEST_RUNTIME_ONLY_CONFIGURATION_NAME, "org.junit.platform:junit-platform-launcher"));
         // 添加测试任务 ...
         project.getConfigurations()
                 .all( files -> files.getResolutionStrategy().eachDependency(dependencyResolveDetails -> {
@@ -38,7 +39,9 @@ public class TestConventions implements Plugin<Project> {
             test.useJUnitPlatform();
             test.useJUnit();
             test.useTestNG();
-            test.include("club/smileboy/app/**");
+            test.filter(testFilter -> {
+                testFilter.includeTestsMatching("*Test");
+            });
         });
 
     }

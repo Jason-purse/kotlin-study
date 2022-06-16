@@ -2,6 +2,8 @@ plugins {
     id "java-gradle-plugin"
 }
 
+targetCompatibility = "11"
+sourceCompatibility = "11"
 
 gradlePlugin {
     plugins {

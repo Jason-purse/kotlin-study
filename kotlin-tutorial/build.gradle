@@ -6,6 +6,12 @@ plugins {
 group 'club.smileboy'
 version '1.0-SNAPSHOT'
 
+
+ext {
+    kotlinxVersion = "1.6.0-RC"
+    slf4jVersion = "1.7.36"
+    logbackVersion = "1.2.10"
+}
 repositories {
     mavenCentral()
 }

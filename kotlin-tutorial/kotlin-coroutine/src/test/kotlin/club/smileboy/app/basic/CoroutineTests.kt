@@ -1,11 +1,11 @@
-package club.smileboy.app
+package club.smileboy.app.basic
 
 import org.junit.jupiter.api.Test
 
 class CoroutineTests {
 
     @Test
-    fun test() {
+    public fun test() {
       assert(1 == 1)
         println("123123123 ")
     }
