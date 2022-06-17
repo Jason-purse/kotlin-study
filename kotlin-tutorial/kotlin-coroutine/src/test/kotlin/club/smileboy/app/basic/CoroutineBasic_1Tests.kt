@@ -32,7 +32,7 @@ import org.junit.jupiter.api.Test
  *
  *
  */
-class CoroutineBasicTests {
+class CoroutineBasic_1Tests {
 
     // --------------------------------------- 结构化并发  和 暂停函数 -------------------------------
 

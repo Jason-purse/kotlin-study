@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory
  *  block -> suspend
  *  thread -> coroutine
  */
-class CoroutineAndChannelTests {
+class CoroutineAndChannel_2Tests {
 //    ========================================================== suspend 函数 能力 ======================================
     /**
      * 例如官方给出这样的一段代码,如何调用上面示例的方法,如何调用一个暂停函数
@@ -181,7 +181,7 @@ class CoroutineAndChannelTests {
      */
     @Test
     fun withContextTests() {
-        var logger = LoggerFactory.getLogger(CoroutineAndChannelTests::class.java)
+        var logger = LoggerFactory.getLogger(CoroutineAndChannel_2Tests::class.java)
         runBlocking(Dispatchers.Default) {
             repeat(3) {
                 launch {

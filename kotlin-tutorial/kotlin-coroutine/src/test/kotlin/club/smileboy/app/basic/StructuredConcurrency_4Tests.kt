@@ -26,7 +26,7 @@ import org.junit.jupiter.api.Test
  * 当在runBlocking / launch / async内部开启新的协程时, 它们(这些子协程)在scope内将自动启动(这个scope 是父协程的scope) ...
  *
  */
-class StructuredConcurrencyTests {
+class StructuredConcurrency_4Tests {
     /**
      * 能够看见 此构建器包含一个lambda 且接收器类型为 CoroutineScope ...
      */

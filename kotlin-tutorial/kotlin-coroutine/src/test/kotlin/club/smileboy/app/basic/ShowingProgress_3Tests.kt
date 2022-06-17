@@ -30,7 +30,7 @@ import org.junit.jupiter.api.Test
  * 请注意，协程和通道都不会完全消除并发带来的复杂性，但是当您需要推理并了解正在发生的事情时，它们肯定会让您的生活更轻松。
  *
  */
-class ShowingProgressTests {
+class ShowingProgress_3Tests {
 
 
     // 编写一个扩展函数
