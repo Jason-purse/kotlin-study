@@ -21,7 +21,8 @@ import org.junit.jupiter.api.Test
  *   - 协程的孩子 ... 子协程 -- 133行
  *   - 父亲的责任 .. -- 197行
  *   - 协程命名 -- 222行
- *   - 协程scope --
+ *   - 协程scope -- 241行
+ *   - thread local data -- 293行 ..
  *
  **/
 class CoroutineContextAndDispatcher_7Tests {

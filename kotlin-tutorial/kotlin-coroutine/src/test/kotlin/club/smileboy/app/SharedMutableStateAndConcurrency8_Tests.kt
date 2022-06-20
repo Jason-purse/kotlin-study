@@ -19,7 +19,12 @@ import kotlin.system.measureTimeMillis
  * 主要问题就是访问共享可变状态 ... 在协程领域，这个问题的一些解决方案与多线程世界中的解决方案类似，但其他一些解决方案是独一无二的。
  *
  * Contents
- *  - 问题
+ *  - 问题 - 27行
+ *  -  同步条件 - 82行
+ *  - 基于协程的状态更新 - 110行 ..
+ *  - 互斥性修改共享给数据 -- 150行
+ *  - Actors -- 191行 ..
+ *
  *
  */
 class SharedMutableStateAndConcurrency8_Tests {
