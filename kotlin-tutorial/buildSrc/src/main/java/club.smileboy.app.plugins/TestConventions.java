@@ -1,14 +1,8 @@
 package club.smileboy.app.plugins;
 
-import org.gradle.api.Action;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
-import org.gradle.api.artifacts.Configuration;
-import org.gradle.api.artifacts.DependencyResolveDetails;
-import org.gradle.api.internal.artifacts.dependencies.DefaultExternalModuleDependency;
 import org.gradle.api.plugins.JavaPlugin;
-import org.gradle.api.plugins.JavaPluginConvention;
-import org.gradle.api.plugins.JavaPluginExtension;
 import org.gradle.api.tasks.testing.Test;
 
 /**
@@ -36,12 +30,16 @@ public class TestConventions implements Plugin<Project> {
 
 
         project.getTasks().named("test", Test.class, test -> {
+            // 不要同时开启多个测试框架
             test.useJUnitPlatform();
-            test.useJUnit();
-            test.useTestNG();
-            test.filter(testFilter -> {
-                testFilter.includeTestsMatching("*Test");
-            });
+//            test.useJUnit();
+//            test.useTestNG();
+
+            // 不添加过滤条件
+//            test.filter(testFilter -> {
+//                // 测试匹配条件 ..
+//                testFilter.includeTestsMatching("*Tests");
+//            });
         });
 
     }
